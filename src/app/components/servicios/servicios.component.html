@@ -1,0 +1,13 @@
+
+<div class="card-columns">  
+  <div class="card" *ngFor="let serv of servicios">    
+    <div class="card-body">
+      <h5 class="card-title">{{ serv.nombre }}</h5>
+      <p class="card-text">{{ serv.descripcion }}</p>
+    </div>
+    <div class="card-footer">
+      <a [routerLink]="['/servicio',serv.id]">Editar</a>
+      <a (click)="deletedServicio(serv.id)">Eliminar</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+Servicio
+<br>
+
+<form (ngSubmit)="modificarServicio(formulario)" #formulario="ngForm">
+  <div class="form-group" >
+    <label for="nameServicio">Nombre</label>
+    <input type="text" class="form-control" id="nameServicio" value="{{ sevicio.nombre }}" [(ngModel)]="sevicio.nombre" name="nombre">
+  </div>
+  <div class="form-group">
+    <label for="descripcion">Descripción</label>
+    <textarea class="form-control" id="descripcion" rows="3" [(ngModel)]="sevicio.descripcion" name="descripcion">{{ sevicio.descripcion }}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" >Grabar</button>
+  <a [routerLink]="['/servicios']" class="btn btn-primary">Cancelar</a>
+</form>
